@@ -10,16 +10,7 @@ export default function SpecificationsSection() {
       <div className="">
 
         {/* TITLE */}
-        <h2
-          className="
-            text-center
-            font-heading
-            text-[40px] sm:text-[48px] md:text-[54px]
-            font-bold
-            text-[#003F38]
-            mb-12
-          "
-        >
+        <h2 className="text-[40px] md:text-[56px] lg:text-[72px] xl:text-[96px] font-heading font-semibold text-[#004035] mb-4 tracking-tight text-center">
           Specifications
         </h2>
 

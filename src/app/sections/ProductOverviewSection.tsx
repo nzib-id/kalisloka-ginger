@@ -33,7 +33,7 @@ export default function ProductOverviewSection() {
       <div className="relative z-10 py-20 md:py-24 text-center">
 
         {/* TITLE */}
-        <h2 className="font-heading text-[38px] sm:text-[46px] md:text-[52px] font-bold text-[#003F38] mb-12">
+          <h2 className="text-[40px] md:text-[56px] lg:text-[72px] xl:text-[96px] font-heading font-semibold text-[#004035] mb-12 tracking-tight">
           Product Overview
         </h2>
 

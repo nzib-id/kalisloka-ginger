@@ -30,15 +30,7 @@ export default function ApplicationsSection() {
       <div className="container mx-auto px-6 max-w-[900px] text-center">
 
         {/* TITLE */}
-        <h2
-          className="
-            font-heading
-            text-[38px] sm:text-[46px] md:text-[54px]
-            text-[#003F38]
-            font-bold
-            mb-4
-          "
-        >
+        <h2 className="text-[40px] md:text-[56px] lg:text-[72px] xl:text-[96px] font-heading font-semibold text-[#004035] mb-4 tracking-tight">
           Applications & Use Cases
         </h2>
 
