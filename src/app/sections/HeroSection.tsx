@@ -9,7 +9,7 @@ export default function HeroSection() {
       id="hero"
       className="
         relative w-full
-        min-h-[110vh] sm:min-h-[110vh] lg:min-h-[115vh]
+        min-h-[110vh] sm:min-h-[110vh] md:min-h-[120vh] lg:min-h-[125vh]
         flex items-center
         overflow-hidden
       "
@@ -19,10 +19,15 @@ export default function HeroSection() {
         src="/images/hero-ginger.png"
         alt="Fresh Ginger Background"
         className="
-          absolute inset-0 w-full h-full
+          absolute inset-0
+          w-full h-full
           object-cover
-          object-[center_30%]
-          md:object-[center_40%]
+          object-[center_10%]
+
+          sm:object-[center_5%]
+
+          md:object-[center_10%]
+          lg:object-[center_15%]
 
         "
       />
@@ -37,6 +42,7 @@ export default function HeroSection() {
             max-w-[750px]
             text-left
             lg:mt-10
+            h-screen flex flex-col justify-center pb-[100px] lg:pb-[150px]
           "
         >
           {/* HEADLINE */}

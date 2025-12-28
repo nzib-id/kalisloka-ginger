@@ -1,6 +1,21 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
+
+type NavItem = {
+  label: string;
+  href: string;
+  cta?: boolean;
+};
+
+const NAV_ITEMS: NavItem[] = [
+  { label: "Overview", href: "#product-overview" },
+  { label: "Specification", href: "#specifications" },
+  { label: "Grades", href: "#grades" },
+  { label: "Send Inquiry", href: "#contact", cta: true },
+];
+
 
 const Navbar: React.FC = () => {
   const [open, setOpen] = useState(false);
@@ -78,14 +93,34 @@ const Navbar: React.FC = () => {
               {/* DESKTOP MENU */}
               <div
                 className={`
-                  hidden md:flex items-center space-x-20
-                  text-sm font-semibold transition-colors duration-300
+                  hidden lg:flex items-center  gap-10
+                  text-sm font-medium transition-colors duration-300
                   ${green ? "text-[#004035]" : "text-white"}
                 `}
               >
-                <a href="#hero" className="hover:opacity-70 transition">Home</a>
-                <a href="#product-overview" className="hover:opacity-70 transition">Product</a>
-                <a href="#contact" className="hover:opacity-70 transition">Contact</a>
+                {NAV_ITEMS.map((item) =>
+                  item.cta ? (
+                    <Link
+                      key={item.label}
+                      href={item.href}
+                      className={`${
+                        green
+                          ? "bg-[#004035] text-[#E6FFCF]"
+                          : "bg-[#fff] text-[#092823]"
+                      } rounded-full text-sm font-semibold px-3 lg:px-5 py-2 hover:opacity-90 transition-all`}
+                    >
+                      {item.label}
+                    </Link>
+                  ) : (
+                    <Link
+                      key={item.label}
+                      href={item.href}
+                      className="hover:opacity-70 transition"
+                    >
+                      {item.label}
+                    </Link>
+                  )
+                )}
               </div>
 
               {/* MOBILE BURGER ICON */}
@@ -133,29 +168,24 @@ const Navbar: React.FC = () => {
               ✕
             </button>
 
-            <a
-              href="#hero"
-              onClick={() => setOpen(false)}
-              className="text-2xl font-medium mb-6 hover:opacity-80 transition"
-            >
-              Home
-            </a>
-
-            <a
-              href="#specifications"
-              onClick={() => setOpen(false)}
-              className="text-2xl font-medium mb-6 hover:opacity-80 transition"
-            >
-              Specifications
-            </a>
-
-            <a
-              href="#contact"
-              onClick={() => setOpen(false)}
-              className="text-2xl font-medium mb-6 hover:opacity-80 transition"
-            >
-              Contact
-            </a>
+            {NAV_ITEMS.map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                onClick={() => setOpen(false)}
+                className={
+                  item.cta
+                    ? `${
+                        green
+                          ? "bg-[#004035] text-[#E6FFCF]"
+                          : "bg-[#fff] text-[#092823]"
+                      } mt-4 rounded-full px-6 py-3 text-xl font-semibold hover:opacity-90 transition`
+                    : "text-2xl font-medium mb-6 hover:opacity-80 transition"
+                }
+              >
+                {item.label}
+              </Link>
+            ))}
           </div>
         </div>
       )}

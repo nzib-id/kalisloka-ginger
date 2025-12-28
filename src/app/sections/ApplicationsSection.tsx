@@ -26,7 +26,7 @@ const applications = [
 
 export default function ApplicationsSection() {
   return (
-    <section id="applications" className="w-full bg-[#E7F9D5] py-20 md:py-28">
+    <section id="applications" className="w-full  py-20 md:py-28">
       <div className="container mx-auto px-6 max-w-[900px] text-center">
 
         {/* TITLE */}
@@ -38,7 +38,7 @@ export default function ApplicationsSection() {
         <p className="text-[15px] md:text-[16px] text-[#003F38] mb-14">
           Fresh ginger from Kalisloka is intended for commercial use, including:
         </p>
-        
+
         {/* LIST */}
         <div className="flex flex-col gap-10 md:gap-[52px] mt-10 container">
 

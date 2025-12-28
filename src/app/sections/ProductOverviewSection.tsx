@@ -5,9 +5,9 @@ import { useState } from "react";
 import { motion, LayoutGroup, cubicBezier  } from "framer-motion";
 
 const ITEMS = [
-  { id: "banana-1", src: "/images/ginger.svg" },
-  { id: "ginger-2", src: "/images/ginger.svg" },
-  { id: "banana-3", src: "/images/ginger.svg" },
+  { id: "banana-1", src: "/images/ginger.png" },
+  { id: "ginger-2", src: "/images/ginger.png" },
+  { id: "banana-3", src: "/images/ginger.png" },
 ];
 
 
@@ -69,15 +69,15 @@ export default function ProductOverviewSection() {
                   layoutId={leftItem.id}   // Wajib Sama dengan ID Item
                   transition={transitionSettings}
                   className="
-                    border-[clamp(3px,0.8vw,6px)] border-[#003F38]
+                    border-[clamp(3px,0.8vw,5px)] border-[#003F38]
                     rounded-[clamp(22px,4vw,40px)]
-                    p-[clamp(3px,0.7vw,7px)]
+                    p-[clamp(1px,0.7vw,5px)]
                     overflow-hidden
                     bg-[#E6FFCF]
                     group-hover:border-[#005947]
                   "
                 >
-                  <div className="relative rounded-[clamp(18px,3.5vw,32px)] overflow-hidden aspect-[6/6]">
+                  <div className="relative rounded-[clamp(18px,3.5vw,32px)] overflow-hidden aspect-[1/1] md:aspect-[6/6]">
                     {/* Overlay */}
                     <a href="" className="absolute inset-0 z-20 bg-black/0 hover:bg-black/25 transition-all duration-300 flex items-center justify-center opacity-0 hover:opacity-100 rounded-[inherit]">
                       <span className="text-[#E6FFCF] text-[13px] sm:text-[15px]">View Detail</span>
@@ -98,7 +98,7 @@ export default function ProductOverviewSection() {
 
 
               {/* BUTTON PREV */}
-              <button onClick={prev} className="z-20 h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 lg:h-16 lg:w-16 flex items-center justify-center rounded-full bg-[#E6FFCF] shadow-sm mr-2 cursor-pointer hover:scale-105 transition-transform">
+              <button onClick={prev} className="z-20 h-14 w-14 lg:h-16 lg:w-16 flex items-center justify-center rounded-full shadow-sm mr-2 cursor-pointer hover:scale-105 transition-transform">
                 <img src="/icons/arrow-left.svg" alt="prev" />
               </button>
 
@@ -112,15 +112,15 @@ export default function ProductOverviewSection() {
                   layoutId={centerItem.id}  // Framer Motion mendeteksi perpindahan ini
                   transition={transitionSettings}
                   className="
-                    border-[clamp(3px,0.8vw,6px)] border-[#003F38]
+                    border-[clamp(3px,0.8vw,5px)] border-[#003F38]
                     rounded-[clamp(22px,4vw,40px)]
-                    p-[clamp(3px,0.7vw,7px)]
+                    p-[clamp(1px,0.7vw,5px)]
                     bg-[#E6FFCF]
                     group-hover:border-[#005947]
                     group-hover:shadow-[0_0_22px_rgba(0,64,53,0.45)]
                   "
                 >
-                  <div className="relative rounded-[clamp(18px,3.5vw,32px)] overflow-hidden aspect-[6/5]">
+                  <div className="relative rounded-[clamp(18px,3.5vw,32px)] overflow-hidden aspect-[1/1] md:aspect-[6/5]">
                     {/* Overlay */}
                     <a href="" className="absolute inset-0 z-20 flex items-center justify-center bg-black/0 backdrop-blur-0 opacity-0 transition-all duration-300 group-hover:bg-black/25 group-hover:backdrop-blur-sm group-hover:opacity-100 rounded-[inherit]">
                       <span className="text-[#E6FFCF] text-[13px] sm:text-[15px]">Click to view detail</span>
@@ -138,7 +138,7 @@ export default function ProductOverviewSection() {
 
 
               {/* BUTTON NEXT */}
-              <button onClick={next} className="z-20 h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 lg:h-16 lg:w-16 flex items-center justify-center rounded-full bg-[#E6FFCF] shadow-sm ml-2 cursor-pointer hover:scale-105 transition-transform">
+              <button onClick={next} className="z-20 h-14 w-14 lg:h-16 lg:w-16 flex items-center justify-center rounded-full shadow-sm ml-2 cursor-pointer hover:scale-105 transition-transform">
                 <img src="/icons/arrow-right.svg" alt="next" />
               </button>
 
@@ -155,15 +155,15 @@ export default function ProductOverviewSection() {
                   layoutId={rightItem.id}
                   transition={transitionSettings}
                   className="
-                    border-[clamp(3px,0.8vw,6px)] border-[#003F38]
+                    border-[clamp(3px,0.8vw,5px)] border-[#003F38]
                     rounded-[clamp(22px,4vw,40px)]
-                    p-[clamp(3px,0.7vw,7px)]
+                    p-[clamp(1px,0.7vw,5px)]
                     overflow-hidden
                     bg-[#E6FFCF]
                     group-hover:border-[#005947]
                   "
                 >
-                  <div className="relative rounded-[clamp(18px,3.5vw,32px)] overflow-hidden aspect-[6/6]">
+                  <div className="relative rounded-[clamp(18px,3.5vw,32px)] overflow-hidden aspect-[1/1] md:aspect-[6/6]">
                     {/* Overlay */}
                     <a href="" className="absolute inset-0 z-20 bg-black/0 hover:bg-black/25 transition-all duration-300 flex items-center justify-center opacity-0 hover:opacity-100 rounded-[inherit]">
                       <span className="text-[#E6FFCF] text-[13px] sm:text-[15px]">View Detail</span>
@@ -187,11 +187,11 @@ export default function ProductOverviewSection() {
         </div>
 
         {/* Description Text */}
-        <div className="container mx-auto text-left mt-12 md:mt-16">
-          {/* DESCRIPTION */} <p className="text-[15px] md:text-[16px] leading-[1.7] text-[#003F38] max-w-[720px] mx-auto mb-6"> Our fresh ginger is supplied as cleaned and sorted raw material, ready to be processed, blended, or further refined in your production line. We work with selected agricultural sources and collection points, emphasizing stability and clarity of specification. </p>
+        <div className="container mx-auto mt-12 md:mt-16 px-7 md:px-10  text-left space-y-4 tracking-tight">
+          {/* DESCRIPTION */} <p className="text-[15px] md:text-[17px] leading-[1.75] text-[#003F38] max-w-[720px] mx-auto mb-6"> Our fresh ginger is supplied as cleaned and sorted raw material, ready to be processed, blended, or further refined in your production line. We work with selected agricultural sources and collection points, emphasizing stability and clarity of specification. </p>
 
           {/* MINI SPECS */}
-          <div className="text-left text-[#003F38] max-w-[720px] mx-auto text-[15px] leading-relaxed">
+          <div className="text-left text-[#003F38] max-w-[720px] mx-auto text-[16px] leading-relaxed">
             <p>
               <span className="font-semibold">Product type:</span> fresh agricultural raw material
             </p>

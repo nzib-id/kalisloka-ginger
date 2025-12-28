@@ -5,7 +5,7 @@ export default function SpecificationsSection() {
   return (
     <section
       id="specifications"
-      className="w-full py-20 bg-[#E6FFCF] container mx-auto "
+      className="w-full py-20 bg-[#E6FFCF] container mx-auto px-6 md:px-10"
     >
       <div className="">
 
@@ -17,64 +17,69 @@ export default function SpecificationsSection() {
         {/* CARD */}
         <div
           className="
-            max-w-[850px]
+            max-w-4xl
             mx-auto
             border-[4px] border-[#003F38]
             rounded-3xl
-            p-8 sm:p-10 md:p-12
+            p-8 sm:p-10 md:p-12 py-12 md:py-16
             bg-transparent
           "
         >
           <div
             className="
               grid grid-cols-1 md:grid-cols-2
-              gap-10 md:gap-16 items-center
+              gap-5 items-center
             "
           >
-            {/* TEXT BLOCK */}
-            <div className="space-y-4 text-[#003F38] text-[15px] leading-relaxed">
-
-              <p>
-                <span className="font-semibold">Product Name:</span> Fresh Ginger
-              </p>
-
-              <p>
-                <span className="font-semibold">Botanical Name:</span>{" "}
-                <span className="italic">Zingiber officinale</span>
-              </p>
-
-              <p>
-                <span className="font-semibold">Form:</span> Whole roots, fresh, cleaned
-              </p>
-
-              <p>
-                <span className="font-semibold">Color (Flesh):</span> Yellow
-              </p>
-
-              <p>
-                <span className="font-semibold">Aroma:</span> Strong, spicy, suitable for
-                processing and extraction
-              </p>
-
-              <p>
-                <span className="font-semibold">Origin:</span> Sourced from agricultural
-                areas in West Java (traceable by batch)
-              </p>
-            </div>
-
             {/* IMAGE */}
-            <div className="flex justify-center md:justify-end">
+            <div className="flex justify-center md:justify-end order-1 md:order-2">
               <img
-                src="/images/ginger.svg"
+                src="/images/ginger.png"
                 alt="Ginger"
                 className="
                   w-[220px] h-[220px] md:w-[260px] md:h-[260px]
                   object-cover
                   rounded-2xl
                   shadow-sm
+                  border-[4px] border-[#003F38]
+                  md:rounded-[35px]
+
                 "
               />
             </div>
+
+            {/* TEXT BLOCK */}
+            <div className=" text-[#003F38] space-y-2  text-[16px] md:text-[18px] order-2 md:order-1 leading-relaxed">
+
+              <p>
+                <span className="font-semibold font-heading">Product Name:</span> Fresh Ginger
+              </p>
+
+              <p>
+                <span className="font-semibold font-heading">Botanical Name:</span>{" "}
+                <span className="italic font-heading">Zingiber officinale</span>
+              </p>
+
+              <p>
+                <span className="font-semibold font-heading">Form:</span> Whole roots, fresh, cleaned
+              </p>
+
+              <p>
+                <span className="font-semibold font-heading">Color (Flesh):</span> Yellow
+              </p>
+
+              <p>
+                <span className="font-semibold font-heading">Aroma:</span> Strong, spicy, suitable for
+                processing and extraction
+              </p>
+
+              <p>
+                <span className="font-semibold font-heading">Origin:</span> Sourced from agricultural
+                areas in West Java (traceable by batch)
+              </p>
+            </div>
+
+
           </div>
         </div>
 
