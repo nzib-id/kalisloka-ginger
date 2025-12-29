@@ -10,15 +10,30 @@ const montserrat = Montserrat({
 });
 
 /* ====== METADATA ====== */
+
 export const metadata: Metadata = {
-  title: "Kalisloka - Ginger",
+  title: {
+    default: "Kalisloka",
+    template: "%s | Kalisloka",
+  },
   description:
-    "Official website of Kalisloka — Agricultural Raw Material Supply & Trade Partner.",
+    "Kalisloka is an agricultural raw material supply and trade partner serving industrial and export needs.",
   icons: {
     icon: "/icons/favicon.svg",
     shortcut: "/icons/favicon.svg",
   },
 };
+
+
+// export const metadata: Metadata = {
+//   title: "Kalisloka - Ginger",
+//   description:
+//     "Official website of Kalisloka — Agricultural Raw Material Supply & Trade Partner.",
+//   icons: {
+//     icon: "/icons/favicon.svg",
+//     shortcut: "/icons/favicon.svg",
+//   },
+// };
 
 /* ====== ROOT LAYOUT ====== */
 export default function RootLayout({

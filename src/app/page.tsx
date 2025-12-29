@@ -8,16 +8,23 @@ import GradesSizingSection from "./sections/GradesSizingSection";
 import ApplicationsSection from "./sections/ApplicationsSection";
 import ContactSection from "./sections/ContactSection";
 
+export const metadata = {
+  title: "Fresh Ginger – Commercial Raw Material Supply",
+  description:
+    "Kalisloka provides fresh ginger supply with standardized grades, specifications, and applications for export and industrial markets.",
+};
 
 const HomePage: React.FC = () => {
   return (
     <Layout>
-      <HeroSection />
-      <ProductOverviewSection />
-      <SpecificationsSection />
-      <GradesSizingSection />
-      <ApplicationsSection />
-      <ContactSection />
+      <main>
+        <HeroSection />
+        <ProductOverviewSection />
+        <SpecificationsSection />
+        <GradesSizingSection />
+        <ApplicationsSection />
+        <ContactSection />
+      </main>
     </Layout>
   );
 };
